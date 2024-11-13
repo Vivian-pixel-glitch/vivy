@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      body {
+        background-color: #33333333;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: black;
+      }
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      nav li a {
+        text-decoration: none;
+      }
+      nav .dropdown {
+        position: relative;
+        display: none;
+      }
+      nav .dropdown ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: navy;
+        padding: 10px;
+        display: none;
+      }
+      nav .dropdown:hover ul {
+        display: flex;
+      }
+      
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      header {
+        background-color: navy;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      header main {
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+      }
+      section {
+        display: flex;
+      }
+      section div,
+      section img {
+        width: 50%;
+      }
+
+      @media only screen and (max-width: 800px) {
+        nav .dropdown {
+          display: block;
+        }
+        nav > ul > li:not(.dropdown) {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 560px) {
+        section {
+          flex-direction: column-reverse;
+        }
+      }
+
+      @media only screen and (max-width: 710px) {
+        section img {
+          display: none;
+        }
+      }
+
+      /* section{
+            background-color: yellow;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+        }
+        section div{
+            width:200px;
+            height: 200px;
+            position: absolute;
+        }
+        section div.one{
+            background-color: red;
+            top: 30px;
+            left: 70px;
+        }
+        section div.two{
+            background-color:black;
+            bottom: 20px;
+            right: 50px;
+            border-radius: 50%;
+        }
+        section main{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        } */
+      /* p{
+            text-align: center;
+            color: red;
+        } */
+
+      /* Descendant Selector*/
+      /* section p{
+        color:green
+        */
+
+      /* CHILD SELECTOR*/
+      /* section > p{
+            color: green;
+        } */
+
+      /* adjascent selector*/
+      /* section+p{
+            color:yellow
+        } */
+
+      /* General sibling selector*/
+      /* section~p{
+            color: blue;
+        } */
+    </style>
+  </head>
+  <body>
+    <!-- revision -->
+    <!-- 1.media query -->
+    <!-- 2.combinators -->
+    <!-- 3.Positioning -->
+    <!-- 4.Dropdown -->
+    <!-- 5.Before and after -->
+
+    <!-- <section>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+
+
+         <div>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p>
+            <p>P tag</p> 
+         </div>
+
+         <p>P tag</p>
+         <p>P tag</p>
+         <p>P tag</p>
+         <p>P tag</p>
+         <p>P tag</p>
+         <p>P tag</p>
+        </section>
+
+        <p>P tag</p>
+        <p>P tag</p>
+        <p>P tag</p>
+        <p>P tag</p>
+        <p>P tag</p> -->
+
+    <!-- <section>
+            <div class="one"></div>
+            <div class="two"></div>
+
+            <main>
+                Voluptatem veniam nemo rem tempore explicabo modi itaque, velit quidem. Ipsa atque repudiandae natus non asperiores commodi ea quaerat perferendis dolore.
+                Veritatis repellendus alias sint iure, laboriosam in, non id ipsam pariatur adipisci soluta amet magnam earum sit exercitationem animi. Iste quas reiciendis quis, corrupti sequi in nihil distinctio assumenda optio.
+                Quaerat ab at esse magni sequi necessitatibus voluptates. Mollitia possimus, ducimus provident vitae officiis commodi, animi quasi excepturi molestias eligendi suscipit optio debitis at inventore? At quas velit nostrum eum.
+                Ab magnam cumque, quae, omnis aliquam, nesciunt mollitia cupiditate saepe debitis architecto tempore. Iure libero maiores, quia distinctio ipsam quo vero, ea autem, vel architecto cum at voluptate beatae eius.
+                Sunt nihil quam culpa minima quidem dolor, tempore ratione eligendi maiores itaque architecto amet? Reprehenderit sed qui nisi vitae provident, soluta ad alias minima cum quidem quia dolores, quae placeat?
+            </main>
+        </section> -->
+
+    <nav>
+      <div>logo</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="dropdown">
+          <a href="#">Menu</a>
+
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+      <main></main>
+    </header>
+
+    <h1>Media Query</h1>
+    <section>
+      <img
+        src="./../../../../Downloads/netflix-background-gs7hjuwvv2g0e9fj.jpg"
+        alt="An image"
+      />
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, aliquid. Suscipit quisquam, illum facere, voluptatem voluptates modi dolor maxime iusto, provident eos optio. Ex doloremque a ad iure. Ea, asperiores.
+        Ab ipsam labore dolor culpa magni consequatur qui optio quasi officiis, ullam dolore voluptatem earum similique mollitia necessitatibus. Necessitatibus iure reiciendis quas explicabo nobis ab, ex illum tempore quo perspiciatis.
+        Aut, ad esse omnis ex quae perferendis asperiores, officia minima debitis cupiditate natus itaque eveniet, deleniti delectus ullam voluptates? Veniam consectetur culpa aperiam unde! Placeat eum est ex ea error.
+        Itaque, veritatis reprehenderit? Voluptate deleniti, enim corrupti sequi quis unde dolorem recusandae magnam temporibus officia voluptatum nihil consectetur, velit explicabo obcaecati reprehenderit architecto culpa praesentium, dolor officiis possimus illum alias.
+        Aut hic quas, sapiente explicabo ex maiores officia quae, velit numquam laudantium dolores accusamus ducimus pariatur nesciunt perferendis suscipit cupiditate, praesentium atque a consequatur necessitatibus non iste aliquam. Cupiditate, vero!
+        Ex quo laudantium blanditiis ipsum in ipsam, illum repellendus esse! A culpa voluptate fuga eius sit praesentium dolore, eligendi voluptatum placeat incidunt nobis officia quisquam dolorum! Voluptates consequuntur iusto tenetur?
+        Harum doloribus porro ab rem quae sapiente ipsum maiores. Illo sapiente voluptates vitae dolore, iste minima enim alias dignissimos dolorum praesentium. Excepturi reprehenderit veniam, dolorem ullam dolorum inventore explicabo est?
+        Quidem illum voluptate expedita, corrupti quasi nihil perferendis. Natus aspernatur tenetur ullam quod, corrupti maxime. Commodi molestiae, obcaecati molestias eum assumenda corporis velit nam dolorum modi mollitia. Nihil, tempore sint!
+        Porro, provident earum temporibus voluptates odit amet explicabo expedita ea dolorum nihil accusantium voluptatibus cumque atque soluta eius. Illo omnis itaque dolore nostrum officiis recusandae enim officia maxime neque soluta.
+        Quibusdam repellendus quisquam doloremque eum ea? Quisquam, quam sapiente! Minus dolorem iste cupiditate distinctio odio, molestias magnam dolore quo! Dolor porro eveniet aspernatur quibusdam amet tempora vitae aperiam nobis iusto.
+        Suscipit eum quo repellat quos, expedita enim laborum et, quidem maiores voluptatum aut ea eaque recusandae. Enim rem tempore ipsa. Mollitia tempora eligendi debitis nesciunt fuga excepturi ipsam consectetur dolorum.
+        Cum iure at non asperiores facere, atque fugit libero soluta consequuntur quaerat distinctio deserunt amet saepe accusamus temporibus cumque nostrum aliquid eligendi harum explicabo repudiandae alias! Magnam id voluptatibus autem!
+        Autem dolor qui nulla doloribus delectus corporis magnam rem quae consequuntur, exercitationem aliquam maxime dolorum rerum pariatur fugit totam adipisci asperiores. Consectetur aliquid dolorum laboriosam beatae, totam corporis inventore non.
+        Nihil officia ut fugiat exercitationem ex doloribus recusandae similique tenetur sit. Dicta quam sapiente voluptatibus vero non! Corrupti nam recusandae repellat praesentium optio consectetur, animi saepe facere iure quasi reiciendis!
+        Eos nam, ducimus totam doloremque saepe cumque nemo consequatur voluptatem inventore molestias tenetur dicta temporibus mollitia vitae aliquid iste quaerat deserunt hic quo quis perspiciatis! Aliquam, recusandae ipsum. Facere, perspiciatis.
+        Vitae nesciunt ad consectetur blanditiis exercitationem, recusandae ducimus tempore vel! In quibusdam praesentium, sit cum facere unde soluta atque molestiae id maxime magni corporis ab fugiat facilis aliquid ipsam et.
+        Suscipit voluptates in neque quos modi mollitia. Consequuntur perferendis autem, dolor dolore atque exercitationem quae quibusdam tenetur corrupti error, explicabo eveniet aperiam quo sunt obcaecati hic quas laudantium maxime iste.
+        Animi voluptatum pariatur placeat doloribus, aliquam nam laborum nihil voluptas sit neque beatae commodi iusto veniam harum fugit aliquid unde accusamus exercitationem rem. Ex facilis, sequi quas ad optio doloribus?
+      </div>
+    </section>
+  </body>
+</html>
